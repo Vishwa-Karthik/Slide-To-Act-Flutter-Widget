@@ -1,16 +1,49 @@
-# slide_act
+# Slide To Act 
 
-A new Flutter project.
+A simple flutter's slide to act widget
 
-## Getting Started
+## Add Dependency
+```bash
+flutter pub add slide_to_act
+```
 
-This project is a starting point for a Flutter application.
+## Sample
+<p><img alt="gif" align="center" src="https://github.com/Vishwa-Karthik/Slide-To-Act-Flutter-Widget/blob/master/giff.gif" width=200 height=400 />
+<p/>
 
-A few resources to get you started if this is your first Flutter project:
+## Code
+```dart
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.deepPurple[100],
+      body: Center(
+          child: Padding(
+        padding: const EdgeInsets.all(22.0),
+        child: SlideAction(
+          onSubmit: () {},
+          innerColor: Colors.deepPurple,
+          outerColor: Colors.deepPurple[200],
+          sliderButtonIcon: Icon(
+            Icons.lock_open_outlined,
+            color: Colors.white,
+          ),
+          text: "Slide to Pay",
+          sliderRotate: false,
+        ),
+      )),
+    );
+  }
+}
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Reference
+Pub.dev : [slide_to_act](https://pub.dev/packages/slide_to_act)
+
+
+
+
